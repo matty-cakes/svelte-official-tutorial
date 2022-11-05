@@ -1,6 +1,7 @@
 <script>
   import Router, { link } from "svelte-spa-router"
 
+  // Basics
   import Home from "./lib/routes/Home.svelte"
   import HelloWorld from "./lib/routes/HelloWorld.svelte"
   import HelloMatt from "./lib/routes/HelloMatt.svelte"
@@ -8,6 +9,12 @@
   import Stylin from "./lib/routes/Stylin.svelte"
   import NestIt from "./lib/routes/NestIt.svelte"
   import PlaySafely from "./lib/routes/PlaySafely.svelte"
+
+  // Reactivity
+  import Assignments from "./lib/routes/reactivity/Assignments.svelte"
+  import Declarations from "./lib/routes/reactivity/Declarations.svelte"
+  import Statements from "./lib/routes/reactivity/Statements.svelte"
+  import ReferenceThis from "./lib/routes/reactivity/ReferenceThis.svelte"
 
   import NotFound from "./lib/routes/NotFound.svelte"
 
@@ -19,6 +26,10 @@
     "/stylin": Stylin,
     "/nest-it": NestIt,
     "/play-safely": PlaySafely,
+    "/reactivity/assignments": Assignments,
+    "/reactivity/declarations": Declarations,
+    "/reactivity/statements": Statements,
+    "/reactivity/reference-this": ReferenceThis,
 
     // Catch-all - This is optional, but if present it must be the last
     "*": NotFound,
@@ -28,6 +39,7 @@
 <main>
   <div class="container">
     <div class="left">
+      <div class="section-title">The Basics</div>
       <ul>
         <li><a href="/hello-world" use:link>001 Hello World</a></li>
         <li><a href="/hello-matt" use:link>002 Hello Matt</a></li>
@@ -38,19 +50,41 @@
         <li><a href="/nest-it" use:link>005 Nest It</a></li>
         <li><a href="/play-safely" use:link>006 Play Safely</a></li>
       </ul>
+      <div class="section-title">Reactvity</div>
+      <ul>
+        <li><a href="/reactivity/assignments" use:link>007 Assignments</a></li>
+        <li>
+          <a href="/reactivity/declarations" use:link>008 Declarations</a>
+        </li>
+        <li>
+          <a href="/reactivity/statements" use:link>009 Statements</a>
+        </li>
+        <li>
+          <a href="/reactivity/reference-this" use:link>010 Reference This</a>
+        </li>
+      </ul>
     </div>
     <div class="right">
       <div class="intro">
         <div class="welcome">Welcome To The Svelte Tutorial</div>
         <div class="explanation">
-          This tutorial employs the help of <code>svelte-spa-router</code> to accomplish
-          it's routing requirements. Aside from this it is the boilerplate project
-          provided by the Vite Svelte template. At the moment the back and forward
-          buttons won't work since it uses hash based routing... Not crazy about
-          this, but you get what you get and you don't throw a fit. Beneath the line
-          below you will find the result of a tutorial. The Svelte site does these
-          in a superior fashion via its tabs, but that isn't my goal... my goal is
-          to learn it.
+          <p>
+            This is a step by step recreation of the tutorial demonstrations
+            from Svelte's website. I often feel as though I get more out of this
+            manner of doing tutorials as there is something irreplacable about
+            the code running on my machine.
+          </p>
+          <br />
+          <p>
+            This tutorial employs the help of <code>svelte-spa-router</code> to accomplish
+            it's routing requirements. Aside from this it is the boilerplate project
+            provided by the Vite Svelte template. At the moment the back and forward
+            buttons won't work since it uses hash based routing... Not crazy about
+            this, but you get what you get and you don't throw a fit. Beneath the
+            line below you will find the result of a tutorial. The Svelte site does
+            these in a superior fashion via its tabs, but that isn't my goal... my
+            goal is to learn it.
+          </p>
         </div>
         <hr />
       </div>
@@ -70,10 +104,14 @@
   .left {
     background-color: #676778;
     height: 100vh;
-    min-width: 300px;
-    max-width: 400px;
-    width: 20%;
-    padding: 10px;
+    min-width: 225px;
+    max-width: 325px;
+    width: 21%;
+    padding: 1rem 1rem;
+  }
+
+  .left ul {
+    margin-bottom: 1rem;
   }
 
   .left li {
@@ -84,8 +122,14 @@
     color: aliceblue;
   }
 
+  .left .section-title {
+    margin-bottom: 5px;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
   .right {
-    margin: 10px 25px;
+    padding: 1rem 2.75rem;
     display: flex;
     flex-direction: column;
   }
