@@ -1,5 +1,5 @@
 <script>
-  import JustAParagraph from "../components/JustAParagraph.svelte"
+  import JustAParagraph from "../../components/JustAParagraph.svelte"
 
   let name = "Matt".toUpperCase()
 </script>

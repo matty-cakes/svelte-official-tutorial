@@ -2,13 +2,13 @@
   import Router, { link } from "svelte-spa-router"
 
   // Basics
-  import Home from "./lib/routes/Home.svelte"
-  import HelloWorld from "./lib/routes/HelloWorld.svelte"
-  import HelloMatt from "./lib/routes/HelloMatt.svelte"
-  import AllComingTogether from "./lib/routes/AllComingTogether.svelte"
-  import Stylin from "./lib/routes/Stylin.svelte"
-  import NestIt from "./lib/routes/NestIt.svelte"
-  import PlaySafely from "./lib/routes/PlaySafely.svelte"
+  import Home from "./lib/routes/basics/Home.svelte"
+  import HelloWorld from "./lib/routes/basics/HelloWorld.svelte"
+  import HelloMatt from "./lib/routes/basics/HelloMatt.svelte"
+  import AllComingTogether from "./lib/routes/basics/AllComingTogether.svelte"
+  import Stylin from "./lib/routes/basics/Stylin.svelte"
+  import NestIt from "./lib/routes/basics/NestIt.svelte"
+  import PlaySafely from "./lib/routes/basics/PlaySafely.svelte"
 
   // Reactivity
   import Assignments from "./lib/routes/reactivity/Assignments.svelte"
@@ -16,6 +16,11 @@
   import Statements from "./lib/routes/reactivity/Statements.svelte"
   import ReferenceThis from "./lib/routes/reactivity/ReferenceThis.svelte"
 
+  // Props
+  import JustProps from "./lib/routes/props/just-props/JustProps.svelte"
+  import DefaultProps from "./lib/routes/props/default-props/DefaultProps.svelte"
+
+  // Admin Routes
   import NotFound from "./lib/routes/NotFound.svelte"
 
   const routes = {
@@ -26,10 +31,16 @@
     "/stylin": Stylin,
     "/nest-it": NestIt,
     "/play-safely": PlaySafely,
+
+    // Reactivity
     "/reactivity/assignments": Assignments,
     "/reactivity/declarations": Declarations,
     "/reactivity/statements": Statements,
     "/reactivity/reference-this": ReferenceThis,
+
+    // Props
+    "/props/just-props": JustProps,
+    "/props/default-props": DefaultProps,
 
     // Catch-all - This is optional, but if present it must be the last
     "*": NotFound,
@@ -61,6 +72,15 @@
         </li>
         <li>
           <a href="/reactivity/reference-this" use:link>010 Reference This</a>
+        </li>
+      </ul>
+      <div class="section-title">Properties</div>
+      <ul>
+        <li>
+          <a href="/props/just-props" use:link>011 Just Props</a>
+        </li>
+        <li>
+          <a href="/props/default-props" use:link>012 Default Props</a>
         </li>
       </ul>
     </div>
