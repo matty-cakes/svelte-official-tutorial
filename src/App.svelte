@@ -19,6 +19,12 @@
   // Props
   import JustProps from "./lib/routes/props/just-props/JustProps.svelte"
   import DefaultProps from "./lib/routes/props/default-props/DefaultProps.svelte"
+  import SpreadProps from "./lib/routes/props/spread-props/SpreadProps.svelte"
+
+  // Logic
+  import IfAndElse from "./lib/routes/logic/IfAndElse.svelte"
+  import LoopIt from "./lib/routes/logic/LoopIt.svelte"
+  import AsyncMagic from "./lib/routes/logic/AsyncMagic.svelte"
 
   // Admin Routes
   import NotFound from "./lib/routes/NotFound.svelte"
@@ -41,6 +47,12 @@
     // Props
     "/props/just-props": JustProps,
     "/props/default-props": DefaultProps,
+    "/props/spread-props": SpreadProps,
+
+    // Logic
+    "/logic/if-else": IfAndElse,
+    "/logic/loop-it": LoopIt,
+    "/logic/async-magic": AsyncMagic,
 
     // Catch-all - This is optional, but if present it must be the last
     "*": NotFound,
@@ -81,6 +93,21 @@
         </li>
         <li>
           <a href="/props/default-props" use:link>012 Default Props</a>
+        </li>
+        <li>
+          <a href="/props/spread-props" use:link>013 Spread Props</a>
+        </li>
+      </ul>
+      <div class="section-title">Logic</div>
+      <ul>
+        <li>
+          <a href="/logic/if-else" use:link>014 If And Else</a>
+        </li>
+        <li>
+          <a href="/logic/loop-it" use:link>015 Loop It</a>
+        </li>
+        <li>
+          <a href="/logic/async-magic" use:link>016 Async Magic</a>
         </li>
       </ul>
     </div>
