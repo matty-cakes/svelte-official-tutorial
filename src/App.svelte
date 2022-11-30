@@ -26,6 +26,23 @@
   import LoopIt from "./lib/routes/logic/LoopIt.svelte"
   import AsyncMagic from "./lib/routes/logic/AsyncMagic.svelte"
 
+  // Events
+  import BasicEvent from "./lib/routes/events/BasicEvent.svelte"
+  import InlineHandler from "./lib/routes/events/InlineHandler.svelte"
+  import Modifier from "./lib/routes/events/Modifier.svelte"
+  import ComponentEvents from "./lib/routes/events/ComponentEvents.svelte"
+  import BubbleUp from "./lib/routes/events/BubbleUp.svelte"
+  import DomBubbles from "./lib/routes/events/DOMBubbles.svelte"
+
+  // Bindings
+  import SimpleInput from "./lib/routes/binding/SimpleInput.svelte"
+  import Numbers from "./lib/routes/binding/Numbers.svelte"
+  import Checkboxes from "./lib/routes/binding/Checkboxes.svelte"
+  import Groups from "./lib/routes/binding/Groups.svelte"
+  import Shorthand from "./lib/routes/binding/Shorthand.svelte"
+  import SelectIt from "./lib/routes/binding/SelectIt.svelte"
+  import SelectMultiple from "./lib/routes/binding/SelectMultiple.svelte"
+
   // Admin Routes
   import NotFound from "./lib/routes/NotFound.svelte"
 
@@ -53,6 +70,23 @@
     "/logic/if-else": IfAndElse,
     "/logic/loop-it": LoopIt,
     "/logic/async-magic": AsyncMagic,
+
+    // Events
+    "/events/basic-event": BasicEvent,
+    "/events/inline-handler": InlineHandler,
+    "/events/modifier": Modifier,
+    "/events/component-events": ComponentEvents,
+    "/events/bubble-up": BubbleUp,
+    "/events/dom-bubbles": DomBubbles,
+
+    // Bindings
+    "/bindings/simple-input": SimpleInput,
+    "/bindings/numbers": Numbers,
+    "/bindings/checkboxes": Checkboxes,
+    "/bindings/groups": Groups,
+    "/bindings/shorthand": Shorthand,
+    "/bindings/select-it": SelectIt,
+    "/bindings/select-multiple": SelectMultiple,
 
     // Catch-all - This is optional, but if present it must be the last
     "*": NotFound,
@@ -108,6 +142,51 @@
         </li>
         <li>
           <a href="/logic/async-magic" use:link>016 Async Magic</a>
+        </li>
+      </ul>
+      <div class="section-title">Events</div>
+      <ul>
+        <li>
+          <a href="/events/basic-event" use:link>017 Basic Events</a>
+        </li>
+        <li>
+          <a href="/events/inline-handler" use:link>018 Inline Handler</a>
+        </li>
+        <li>
+          <a href="/events/modifier" use:link>019 Modifiers</a>
+        </li>
+        <li>
+          <a href="/events/component-events" use:link>020 Component Events</a>
+        </li>
+        <li>
+          <a href="/events/bubble-up" use:link>021 Bubble Up</a>
+        </li>
+        <li>
+          <a href="/events/dom-bubbles" use:link>022 DOM Bubbles</a>
+        </li>
+      </ul>
+      <div class="section-title">Bindings</div>
+      <ul>
+        <li>
+          <a href="/bindings/simple-input" use:link>023 Basic Bindings</a>
+        </li>
+        <li>
+          <a href="/bindings/numbers" use:link>024 Numeric Bindings</a>
+        </li>
+        <li>
+          <a href="/bindings/checkboxes" use:link>025 Checkbox Bindings</a>
+        </li>
+        <li>
+          <a href="/bindings/groups" use:link>026 Group Bindings</a>
+        </li>
+        <li>
+          <a href="/bindings/shorthand" use:link>027 Binding Shorthand</a>
+        </li>
+        <li>
+          <a href="/bindings/select-it" use:link>028 Select It</a>
+        </li>
+        <li>
+          <a href="/bindings/select-multiple" use:link>029 Select Multiple</a>
         </li>
       </ul>
     </div>

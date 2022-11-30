@@ -26,7 +26,7 @@
     {#await promise}
       <p>...waiting</p>
     {:then text}
-      <p>The text is {text}</p>
+      <p>{text}</p>
     {:catch error}
       <p style="color: red">{error.message}</p>
     {/await}

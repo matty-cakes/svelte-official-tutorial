@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.1.0
+  marked: ^4.2.3
   svelte: ^3.52.0
   svelte-spa-router: ^3.3.0
   vite: ^3.2.0
 
 dependencies:
+  marked: 4.2.3
   svelte-spa-router: 3.3.0
 
 devDependencies:
@@ -319,6 +321,12 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
     dev: true
+
+  /marked/4.2.3:
+    resolution: {integrity: sha512-slWRdJkbTZ+PjkyJnE30Uid64eHwbwa1Q25INCAYfZlK4o6ylagBy/Le9eWntqJFoFT93ikUKMv47GZ4gTwHkw==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
