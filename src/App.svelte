@@ -42,6 +42,7 @@
   import Shorthand from "./lib/routes/binding/Shorthand.svelte"
   import SelectIt from "./lib/routes/binding/SelectIt.svelte"
   import SelectMultiple from "./lib/routes/binding/SelectMultiple.svelte"
+  import Textarea from "./lib/routes/binding/Textarea.svelte"
 
   // Admin Routes
   import NotFound from "./lib/routes/NotFound.svelte"
@@ -87,6 +88,8 @@
     "/bindings/shorthand": Shorthand,
     "/bindings/select-it": SelectIt,
     "/bindings/select-multiple": SelectMultiple,
+    "/bindings/textarea": Textarea,
+
 
     // Catch-all - This is optional, but if present it must be the last
     "*": NotFound,
@@ -187,6 +190,9 @@
         </li>
         <li>
           <a href="/bindings/select-multiple" use:link>029 Select Multiple</a>
+        </li>
+        <li>
+          <a href="/bindings/textarea" use:link>030 Binding Textarea</a>
         </li>
       </ul>
     </div>

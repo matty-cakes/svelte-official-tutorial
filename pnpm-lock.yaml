@@ -2,16 +2,16 @@ lockfileVersion: 5.4
 
 specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.1.0
+  marked: ^9.0.3
   svelte: ^3.52.0
   svelte-spa-router: ^3.3.0
   vite: ^3.2.0
 
-dependencies:
-  svelte-spa-router: 3.3.0
-
 devDependencies:
   '@sveltejs/vite-plugin-svelte': 1.1.0_svelte@3.52.0+vite@3.2.1
+  marked: 9.0.3
   svelte: 3.52.0
+  svelte-spa-router: 3.3.0
   vite: 3.2.1
 
 packages:
@@ -320,6 +320,12 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
+  /marked/9.0.3:
+    resolution: {integrity: sha512-pI/k4nzBG1PEq1J3XFEHxVvjicfjl8rgaMaqclouGSMPhk7Q3Ejb2ZRxx/ZQOcQ1909HzVoWCFYq6oLgtL4BpQ==}
+    engines: {node: '>= 16'}
+    hasBin: true
+    dev: true
+
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
@@ -350,7 +356,7 @@ packages:
   /regexparam/2.0.1:
     resolution: {integrity: sha512-zRgSaYemnNYxUv+/5SeoHI0eJIgTL/A2pUtXUPLHQxUldagouJ9p+K6IbIZ/JiQuCEv2E2B1O11SjVQy3aMCkw==}
     engines: {node: '>=8'}
-    dev: false
+    dev: true
 
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
@@ -396,7 +402,7 @@ packages:
     resolution: {integrity: sha512-cwRNe7cxD43sCvSfEeaKiNZg3FCizGxeMcf7CPiWRP3jKXjEma3vxyyuDtPOam6nWbVxl9TNM3hlE/i87ZlqcQ==}
     dependencies:
       regexparam: 2.0.1
-    dev: false
+    dev: true
 
   /svelte/3.52.0:
     resolution: {integrity: sha512-FxcnEUOAVfr10vDU5dVgJN19IvqeHQCS1zfe8vayTfis9A2t5Fhx+JDe5uv/C3j//bB1umpLJ6quhgs9xyUbCQ==}
